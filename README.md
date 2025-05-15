@@ -13,7 +13,7 @@ To explore and answer typical business questions, such as:
 
 ## Tools and Technologies
 
-- Python: for data simulation, transformation, and preprocessing
+- Python: for data simulation, transformation, and preprocessing (pandas, sqlite,...)
 - SQL: for querying the data using SQLite
 - Tableau Public: for building interactive visualizations and dashboards
 - Git and GitHub: for version control and documentation
@@ -57,7 +57,7 @@ The dataset is fully synthetic and includes:
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Install the required packages:
+3. Install the required packages (the only required package is Pandas):
 
    ```bash
    pip install -r requirements.txt
