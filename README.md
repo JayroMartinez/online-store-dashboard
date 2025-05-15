@@ -13,7 +13,7 @@ To explore and answer typical business questions, such as:
 
 ## Tools and Technologies
 
-- Python: for data simulation, transformation, and preprocessing (pandas, sqlite3)
+- Python: for data simulation, transformation, and preprocessing
 - SQL: for querying the data using SQLite
 - Tableau Public: for building interactive visualizations and dashboards
 - Git and GitHub: for version control and documentation
@@ -22,56 +22,55 @@ To explore and answer typical business questions, such as:
 
 ```
 online-store-dashboard/
-├── data/             # Simulated CSV or SQLite files
-├── sql/              # SQL query files used during the analysis
-├── scripts/          # Python scripts for generating and processing data
-├── dashboards/       # Tableau (.twbx) files and exported screenshots
-├── README.md         # Project documentation
-└── requirements.txt  # Python dependencies
+├── data/               # SQLite database and generated CSVs
+├── dashboards/
+│   ├── png/            # Exported PNG images from Tableau
+│   └── tableau/        # Tableau .twbx files (one per analysis)
+├── scripts/            # Python scripts for data generation and analysis
+├── sql/                # Optional: raw SQL queries
+├── README.md           # Project documentation
+└── .gitignore
 ```
 
 ## Dataset
 
 The dataset is fully synthetic and includes:
 
-- `customers.csv`: customer IDs, names, countries, ages, etc.
-- `orders.csv`: order IDs, customer IDs, timestamps, totals
-- `products.csv`: product IDs, names, categories
-- `order_items.csv`: items per order, quantities, prices
+- `customers`: customer IDs, names, countries, ages, etc.
+- `orders`: order IDs, customer IDs, timestamps, totals
+- `products`: product IDs, names, categories
+- `order_items`: items per order, quantities, prices
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/JayroMartinez/online-store-dashboard.git
    cd online-store-dashboard
    ```
 
-2. (Optional) Create a virtual environment
+2. (Optional) Create a virtual environment:
 
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Install the required packages
+3. Install the required packages:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Run the scripts in the `scripts/` directory  
-   Generate or preprocess the data by running the appropriate Python files.
+4. Run the scripts in the `scripts/` directory to generate and populate the SQLite database.
 
-5. Open the data files in Tableau Public  
-   Use the cleaned/generated files from the `data/` folder to build dashboards.
+5. Use Tableau Public to open and explore the `.twbx` files found in the `dashboards/tableau/` directory.
 
-## Visual Output
+## Results
 
-Screenshots of the dashboards created in Tableau will be added to the `dashboards/` folder and included below.
+All analysis outputs are organized under the `dashboards/` folder:
 
-## Notes
+- `dashboards/png/` contains exported PNG images of each Tableau visualization.
+- `dashboards/tableau/` contains the corresponding `.twbx` Tableau Packaged Workbooks for each individual analysis.
 
-- All data used in this project is fictitious and created for educational purposes.
-- Tableau Public dashboards will be published and linked once available.
